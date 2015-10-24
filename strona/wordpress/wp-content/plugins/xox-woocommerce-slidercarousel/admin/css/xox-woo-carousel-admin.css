@@ -1,0 +1,24 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.cmb-row.cmb-type-title {
+    padding: 0 !important;
+    color: #999;
+}
+
+.cmb-row.cmb-type-title .cmb2-metabox-title {
+    font-size: 18px;
+}
+
+#my-publish-box {
+    display: none;
+}
+
+.xoxscbtn {
+    float: left;
+    font-size: 80px;
+    padding-right: 7px;
+    line-height: 72px;
+}

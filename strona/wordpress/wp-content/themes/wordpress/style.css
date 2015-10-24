@@ -1,0 +1,360 @@
+/*
+Theme Name: Szablon Portal PWR
+Theme URI: http://wordpress.kursbootstrap.pl
+Author: Balbina Skolasińska
+Description: Podstawowa skórka dla Wordpress z kursu http://wordpress.kursbootstrap.pl
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: twitter bootstrap, bootstrap, wordpress, responsive
+Text Domain: wordpress-kursbootstrap
+
+To jest podstawowy plik arkuszu styli dla Wordpressa.
+*/
+
+/* Przyklejona stopka
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 200px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 11.5pt;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  /*background-color: #f5f5f5;*/
+}
+
+/*Obrazek na stronie głównej */
+img.imgHome{
+  margin-left: 11%;
+  margin-bottom: 3%;
+}
+
+img.imgHome2{
+  margin-left: 39%;
+  vertical-align: text-top;
+  float: right;
+  margin: 10px;
+}
+
+/*Klasa obrazka nagłówka
+--------------------------------------------------*/
+#header {
+  height: 370px;
+  width: 100%;
+  margin-bottom: 1%;
+  vertical-align:middle;
+  background: url(images/header.jpg) center top no-repeat;
+  background-size: cover;
+}
+.pwr2{
+  padding-left: 10%;
+}
+
+#language{
+  width: 130px;
+  height: auto;
+  margin-left: 90%;
+  margin-top: 1%;
+  position: absolute;
+  z-index: 1;
+}
+
+/*Przełącznik języków
+-------------------------------------------------*/
+.lang-item {
+    display: inline;
+    list-style: none;
+}
+.lang-item img {
+    width: 25px;
+    margin-right: 3px;
+    height: auto;
+}
+#access img {
+    margin-bottom: 0px;
+}
+/*-------------------------------------------------*/
+
+.vertical-center {
+  min-height: 50%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: -webkit-flex; /* For Safari */
+  -webkit-justify-content: center; /* For Safari */
+  -webkit-align-items: center; /* For Safari */
+}
+
+h2{
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 24pt;
+  font-weight: 400;
+  letter-spacing:6px;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+h4{
+  color:white;
+  margin-left: -5em;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+  letter-spacing:6px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 12pt;
+  color:#B4B4B4;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover{
+  color:#428bca;
+  background: none;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color:#428bca;
+}
+
+ 
+/*Footer
+-------------------------------------------------- */
+
+#footerImg{
+  width: 100%;
+  height: 80px;
+/*  background: url(images/pwr.png) center top no-repeat;
+  background-size: cover;*/
+}
+
+/* Carousel 
+-------------------------------------------------- */
+
+#carousel{
+  padding: 0px;
+  margin: 0 89.5px 0 89.5px;
+  height: 255px;
+}
+
+.carousel-control {
+  padding-top:5%;
+  width:5%;
+}
+
+.carousel-caption{
+  padding-bottom: 0px;
+  padding-top: 0px;
+  background-color: black;
+  opacity: 0.6;
+}
+
+.carousel-inner img{
+  padding: 15px;
+  width: 280px;
+  height: 180px;
+}
+
+.carousel-indicators {
+    bottom: 43px;
+}
+
+.carousel-inner .row{
+  margin: 0;
+}
+
+.category-12 #carousel, .category-9 #carousel{
+  display: none;
+}
+
+/* Changes the colour of the indicators */
+.carousel-indicators li {
+  background: #c0c0c0;
+}
+.carousel-indicators .active {
+background: #333333;
+}
+
+/*wyświetlanie postów na głównej
+-------------------------------------------------- */
+
+.media-heading{
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 12pt;
+  color:#428bca;
+  padding-bottom: 2px;
+}
+
+.btn{
+  display: block;
+}
+
+.thumbnail, .btn-default{
+  border: none;
+}
+
+.media{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 11px;
+}
+/* Moje klasy pomocznicze
+-------------------------------------------------- */
+.no-corners {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.navbar-clear {
+  background: #fff; 
+  border: 0;
+  margin-bottom: 0;
+}
+
+.mar-top-10 {
+  margin-top: 10px;
+}
+
+.mar-top-20 {
+  margin-top: 20px;
+}
+
+.mar-top-30 {
+  margin-top: 30px;
+}
+
+.mar-bot-10 {
+  margin-bottom: 10px;
+}
+
+.mar-bot-20 {
+  margin-bottom: 20px;
+}
+
+.mar-bot-30 {
+  margin-bottom: 30px;
+}
+
+/* Własny button Bootstrap
+-------------------------------------------------- */
+.btn-custom { 
+  color: #ffffff; 
+  background-color: #ed1e40; 
+  border-color: #ed1e40; 
+} 
+ 
+.btn-custom:hover, 
+.btn-custom:focus, 
+.btn-custom:active, 
+.btn-custom.active, 
+.open .dropdown-toggle.btn-custom { 
+  color: #ffffff; 
+  background-color: #b3123a; 
+  border-color: #e50f45; 
+} 
+ 
+.btn-custom:active, 
+.btn-custom.active, 
+.open .dropdown-toggle.btn-custom { 
+  background-image: none; 
+} 
+ 
+.btn-custom.disabled, 
+.btn-custom[disabled], 
+fieldset[disabled] .btn-custom, 
+.btn-custom.disabled:hover, 
+.btn-custom[disabled]:hover, 
+fieldset[disabled] .btn-custom:hover, 
+.btn-custom.disabled:focus, 
+.btn-custom[disabled]:focus, 
+fieldset[disabled] .btn-custom:focus, 
+.btn-custom.disabled:active, 
+.btn-custom[disabled]:active, 
+fieldset[disabled] .btn-custom:active, 
+.btn-custom.disabled.active, 
+.btn-custom[disabled].active, 
+fieldset[disabled] .btn-custom.active { 
+  background-color: #e50f45; 
+  border-color: #e50f45; 
+} 
+ 
+.btn-custom .badge { 
+  color: #e50f45; 
+  background-color: #ffffff; 
+}
+
+/* Własny Bootstrap panel
+-------------------------------------------------- */
+
+.panel-custom {
+  border-color: #27b5fa !important;
+}
+
+.panel-custom > .panel-heading {
+  background-color: #27b5fa; 
+  border-color: #27b5fa;
+  color: #ffffff !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+}
+
+
+/* 
+Responsywny like-box Facebooka
+-------------------------------------------------- */
+
+#fb-root {
+    display: none;
+}
+
+/* To fill the container and nothing else */
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+    width: 100% !important;
+}
+
+
+/* Media queries
+-------------------------------------------------- */
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
+}

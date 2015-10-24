@@ -1,61 +1,17 @@
-<?php 
+<?php
 /**
- * Template name: Wpisy na blogu
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
+ *
+ * @package WordPress
  */
-?>
 
-<!-- Templatka wyglądu listy wpisów na blogu-->
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define('WP_USE_THEMES', true);
 
-<!--Pobranie nagłówka-->
-<?php get_header(); ?>
-
-<!--Treść listy wpisów z bloga-->
-<div class="container">
-  <div class="row">
-    <div class="col-md-3 col-sm-6 col-xs-12">
-
-      <!--Generowanie listy wpisów z bloga-->
-      <?php 
-        $count=0; 
-        query_posts('posts_per_page=9'); 
-        if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        
-          <!--Element Bootstrap Media-->
-          <div class="media">
-            <!--Pobranie miniaturki wpisu-->
-            <a class="thumbnail" href="<?php the_permalink(); ?>">
-              <?php the_post_thumbnail( $size = 'thumbnail'); ?>
-            </a>
-            <!--Pobranie tytułu wpisu-->
-            <div class="media-body">
-              <a class="text-center" href="<?php the_permalink(); ?>"><h4 class="media-heading"><?php the_title(); ?></h4></a>
-              <!--Wyświetlenie krótkiego opisu posta-->
-              <?php the_excerpt(); ?>
-              <!--Przycisk "Czytaj więcej"-->
-              <a href="<?php the_permalink(); ?>" class="btn btn-default">Czytaj więcej</a>
-            </div>
-          </div>
-          <hr>
-
-      <?php 
-      $count++; 
-        if($count == 2 || $count == 4 || $count == 6) echo '</div><div class="row"><div class="col-md-3 col-sm-6 col-xs-12">';
-        endwhile; ?>
-      <!-- post navigation -->
-      <?php else: ?>
-      <!-- no posts found -->
-      <?php endif; ?>
-
-    </div>
-
-    <!--Pobranie panelu bocznego-->
-    <div class="col-md-3 col-sm-6 col-xs-12">
-      <?php get_sidebar(); ?>
-    </div>
-  </div>
-</div>
-
-<!--Pobranie stopki-->
-<?php get_footer(); ?>
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+/** Loads the WordPress Environment and Template */
+require( dirname( __FILE__ ) . '/wp-blog-header.php' );
